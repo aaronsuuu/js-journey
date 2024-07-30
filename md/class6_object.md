@@ -83,7 +83,7 @@ bob.sleep(); // Bob sleep
 
 ```javascript
 
-console.log(this) // 在沒有 Function 或是 類別包覆下，this 會指向全域物件，也就是 window
+console.log(this) // 在沒有物件包覆下，this 會指向全域物件，也就是 window
 
 function add(x,y){
   console.log(this) // Function 的 this 也是 window
@@ -232,14 +232,15 @@ class Man extends Person {
 }
 
 const person = new Person('John', 20, 180, 75)
-person.eat(); // John walk.
+person.eat(); // John eat.
 
 const aaron = new Man('Aaron', 30, 170, 70, 'normal', '30CM')
 aaron.eat(); // Aaron：男人就是要大口吃肉、大口喝酒
 ```
 
-這樣覆寫父類別方法、讓子類別在同樣名稱的方法上可以具有不同行為的方式，就稱為多型(Polymorphism)。
-繼承、封裝、多型這三個特性就稱為物件導向的三大特性，所以這就是為什麼稱 JavaScript 是一種物件導向的語言；可以被稱之為物件導向語言的不只 JS，還有 Java, C++, C#, Python 等等，還有更多就不一一列出了。
+這樣覆寫父類別方法、讓子類別在同樣名稱的方法上可以具有不同行為的方式，稱為多型(Polymorphism)。
+
+繼承、封裝、多型這三個特性稱為物件導向的三大特性，所以這就是為什麼稱 JavaScript 是一種物件導向的語言；可以被稱之為物件導向語言的不只 JS，還有 Java, C++, C#, Python 等等，還有更多就不一一列出了。
 
 ## 物件原本的寫法
 
